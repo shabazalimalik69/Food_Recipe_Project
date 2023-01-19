@@ -69,6 +69,8 @@ export const authReducer = (state = initState, { type, payload }) => {
     case USER_SIGNOUT: {
       localStorage.removeItem("token");
       localStorage.removeItem("userId");
+      localStorage.removeItem("recipeId");
+      localStorage.removeItem("ingredientId");
       return {
         ...state,
         token: "",
