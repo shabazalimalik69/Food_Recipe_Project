@@ -1,0 +1,15 @@
+.recipeForm{
+    width: 40%;
+    margin: auto;
+    margin-top: 60px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 30px;
+}
+.table{
+    width: 60%;
+    margin: auto;
+}
+.table1{
+    width: 90%;
+    margin: auto;
+}
