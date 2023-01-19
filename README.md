@@ -5,7 +5,8 @@ This is a food recipe project where user can signup and signin. Here user can cr
 *Tech Stacks for Fronend:<br/><br/>
 1)HTML5, JavaScript, React Js, Redux, and Chakra UI<br/><br/>
 *Tech Stacks used for Backend:<br/>
-1) Node Js, Express Js, Authentication, Relationship<br/><br/>
+1) Node Js, Express Js, Authentication, Relationship<br/>
+2) Database : MongoDB<br/><br/>
 *Backend Deployed on Render<br/>
 *Frontend Deployed on Netlify<br/>
 *SignUp Page<br/>
