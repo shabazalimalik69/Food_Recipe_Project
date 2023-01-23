@@ -54,8 +54,8 @@ const Home = () => {
   return (
     <Box>
       <Box display="flex" justifyContent="center">
-        <Heading fontSize="2xl">Creator_Id:&nbsp;</Heading>
-        <Text mt="5px">{userId}</Text>
+        <Text className={style.creator}>Creator_Id:&nbsp;</Text>
+        <Text className={style.user}>{userId}</Text>
       </Box>
       <Box className={style.recipeForm}>
         <FormControl>

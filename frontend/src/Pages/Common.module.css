@@ -13,3 +13,66 @@
     width: 90%;
     margin: auto;
 }
+.creator{
+    font-size: x-large;
+    font-weight: bold;
+}
+.user{
+    margin-top: 8px;
+}
+
+/* .image{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:30px;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+} */
+.imag{
+    width: 90%;
+    height: 500px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 130px;
+    margin-top: 30px;
+    /* position: relative; */
+}
+.body {
+    background-image: url("https://media.istockphoto.com/id/507212121/photo/healthy-food-background.jpg?s=612x612&w=is&k=20&c=ma0ci81sIqV4PGFN0oOR7g7Y-MvZZG6vJKcWbKvim1o=");
+  }
+  .body1 {
+    background-image: url("https://i.pinimg.com/originals/b3/ac/93/b3ac935f556fe254403a688d36fff3c0.jpg");
+    background-size: cover;
+    height: 200px;
+    background-repeat: no-repeat;
+    
+  }
+
+@media all and (min-width:250px) and (max-width:450px){
+    .recipeForm{
+    width: 80%;
+    }
+    .table{
+        width: 100%;
+        margin: auto;
+    }
+    .table1{
+        width: 100%;
+        margin: auto;
+    }
+    .creator{
+        font-size: small;
+    }
+    .user{
+        margin-top: 0px;
+        font-size: small;
+    }
+    .imag{
+        width: 90%;
+        height: 200px;
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 30px;
+    }
+}

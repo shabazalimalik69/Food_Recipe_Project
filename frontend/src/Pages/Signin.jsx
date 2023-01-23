@@ -12,11 +12,13 @@ import {
   Input,
   Button,
   useToast,
+  Box,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { signinAPI } from "../Redux/User/userActions";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import style from "./Common.module.css";
 
 const Signin = ({ isOpen, setClose }) => {
   const [user, setUser] = useState({
@@ -28,7 +30,7 @@ const Signin = ({ isOpen, setClose }) => {
   const navigate = useNavigate();
   const { user_id, password } = user;
 
-  //const accessToken = useSelector((store)=>store.auth.accessToken);
+  const token = useSelector((store)=>store.auth.token);
 
   const onClose = () => {
     setClose(false);
@@ -44,15 +46,18 @@ const Signin = ({ isOpen, setClose }) => {
       isClosable: true,
     });
     setClose(false);
-    navigate("/");
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
   };
 
+  if(token){
+    navigate("/home");
+  }
+
   return (
-    <>
+    <Box className={style.body1}>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
@@ -88,7 +93,7 @@ const Signin = ({ isOpen, setClose }) => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </Box>
   );
 };
 

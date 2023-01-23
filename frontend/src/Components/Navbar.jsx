@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import style from "./Navbar.module.css";
 import { useState } from "react";
@@ -18,15 +18,22 @@ const Navbar = () => {
     setIsSignin(true);
   };
   return (
-    <Box className={style.navbar}>
-      <Link to="/">Home</Link>
+    <Box>
+      <Box className={style.navbar}>
+      <Box>
+        <Text className={style.logo}>recipeHub</Text>
+      </Box>
+      <Box className={style.nav1}>
+      <Link to="/home"><Text className={style.home} >Home</Text></Link>
+      <Link to="/"><Text className={style.home} >About</Text></Link>
       <Link to="/signup">
-        <Box onClick={handleSignup}>SignUp</Box>
+        <Box className={style.signup} onClick={handleSignup}>SignUp</Box>
       </Link>
       <Link to="/signin">
-        <Box onClick={handleSignin}>SignIn</Box>
+        <Box className={style.signin} onClick={handleSignin}>SignIn</Box>
       </Link>
-
+    </Box>
+    </Box>
       <Signup isOpen={isSignup} setClose={setIsSignup} />
       <Signin isOpen={isSignin} setClose={setIsSignin} />
     </Box>

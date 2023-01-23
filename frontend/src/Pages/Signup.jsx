@@ -18,6 +18,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signupAPI } from "../Redux/User/userActions";
 import { useNavigate } from "react-router-dom";
+import style from "./Common.module.css";
 
 const Signup = ({ isOpen, setClose }) => {
   const [user, setUser] = useState({
@@ -54,7 +55,7 @@ const Signup = ({ isOpen, setClose }) => {
   };
 
   return (
-    <Box>
+    <Box className={style.body1}>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>

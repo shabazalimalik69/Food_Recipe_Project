@@ -38,21 +38,21 @@ const Steps = () => {
     e.preventDefault();
     //  inputElem.current.focus();
     dispatch(postStepsAPI({ token, data }));
-    navigate("/");
+    navigate("/home");
   };
   return (
     <Box>
       <Box display="flex" justifyContent="center">
-        <Heading fontSize="2xl">Creator_Id:&nbsp;</Heading>
-        <Text mt="5px">{userId}</Text>
+        <Text className={style.creator}>Creator_Id:&nbsp;</Text>
+        <Text className={style.user}>{userId}</Text>
       </Box>
       <Box display="flex" justifyContent="center">
-        <Heading fontSize="2xl">Recipe_Id:&nbsp;</Heading>
-        <Text mt="5px">{recipeId}</Text>
+        <Text className={style.creator}>Recipe_Id:&nbsp;</Text>
+        <Text className={style.user}>{recipeId}</Text>
       </Box>
       <Box display="flex" justifyContent="center">
-        <Heading fontSize="2xl">Ingredient_Id:&nbsp;</Heading>
-        <Text mt="5px">{ingredientId}</Text>
+        <Text className={style.creator}>Ingredient_Id:&nbsp;</Text>
+        <Text className={style.user}>{ingredientId}</Text>
       </Box>
       <Box className={style.recipeForm}>
         <FormControl>
